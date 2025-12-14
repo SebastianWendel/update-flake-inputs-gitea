@@ -6,15 +6,12 @@ inputs:
   gitea-url:
     description: 'Gitea server URL'
     required: true
-    default: ${{ env.GITHUB_SERVER_URL }}
   gitea-token:
     description: 'Gitea authentication token'
     required: true
-    default: ${{ secrets.GITEA_TOKEN }}
   gitea-repository:
     description: 'Repository in format owner/repo'
     required: false
-    default: ${{ env.GITHUB_REPOSITORY}}
   exclude-patterns:
     description: 'Comma-separated list of glob patterns to exclude flake.nix files'
     required: false
