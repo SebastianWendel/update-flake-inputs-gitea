@@ -6,7 +6,7 @@ inputs:
   gitea-url:
     description: 'Gitea server URL'
     required: true
-    default: ${{ vars.GITEA_URL }}
+    default: ${{ github.server_url }}
   gitea-token:
     description: 'Gitea authentication token'
     required: true
@@ -14,7 +14,7 @@ inputs:
   gitea-repository:
     description: 'Repository in format owner/repo'
     required: false
-    default: ${{ vars.GITEA_REPOSITORY }}
+    default: ${{ github.repository}}
   exclude-patterns:
     description: 'Comma-separated list of glob patterns to exclude flake.nix files'
     required: false
